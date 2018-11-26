@@ -39,7 +39,7 @@ spec:
     command: ["contour"]
     args: ["serve", "--incluster", "--use-proxy-protocol"]
 ...
-``
+```
 
 [0]: http://www.haproxy.org/download/1.8/doc/proxy-protocol.txt
 [1]: https://kubernetes.io/docs/tasks/access-application-cluster/create-external-load-balancer
