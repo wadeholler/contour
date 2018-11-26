@@ -33,16 +33,13 @@ spec:
 ...
 spec:
   containers:
-  - name: contour
-    args:                 
-    - serve            
-    - --incluster                 
-    - --use-proxy-protocol
-    command:             
-    - contour                
-    image: gcr.io/heptio-images/contour:latest
+  - image: gcr.io/heptio-images/contour:master
+    imagePullPolicy: Always
+    name: contour
+    command: ["contour"]
+    args: ["serve", "--incluster", "--use-proxy-protocol"]
 ...
-```
+``
 
 [0]: http://www.haproxy.org/download/1.8/doc/proxy-protocol.txt
 [1]: https://kubernetes.io/docs/tasks/access-application-cluster/create-external-load-balancer
